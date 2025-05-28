@@ -4,12 +4,17 @@ This repo contains a working example of running Angular in UXP.
 
 ## Important Information
 
-This branch contains everything needed to demonstrate different environments, and added support for the VSCode debugger
+This branch contains everything needed to demonstrate separation of component libraries from source application
 
 The most important files to take a look at are 
-- [environments](environments/) to see possible environments
-- [app.component.ts](src/app/app.component.ts) to see usage of environments
-- [angular.json](angular.json) see `projects.app.architect.build.configurations.production.fileReplacements`
+- [example-application](projects/example-application/) to see new organization of application
+- [example-library](projects/example-library/) to see new organization of component library
+
+Also, you can note that `index-html-transformer.cjs` and `load.js` got moved into our "library", as this is code that would be required
+in any Angular project. Also, we now have an included `global.css` that is used to store variables that should be shared across applications.
+
+In this example, you would want to maintain the folder `projects/example-library` as its own git repository, potentially adding an install
+script that automatically pulls this repository on `npm install` instead of including it in the project by default.
 
 ## Getting started
 
