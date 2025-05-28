@@ -6,27 +6,3 @@ app-root {
     margin: 0;
     padding: 0;
 }
-
-@media (prefers-color-scheme: darkest) {
-    :root {
-        --theme-highlight: rgb(70, 70, 15);
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --theme-highlight: rgb(110, 110, 20);
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --theme-highlight: rgb(220, 220, 60);
-    }
-}
-
-@media (prefers-color-scheme: lightest) {
-    :root {
-        --theme-highlight: rgb(250, 250, 120);
-    }
-}

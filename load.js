@@ -1,3 +1,5 @@
+// These are the polyfills required to allow Angular to work in UXP
+
 if (typeof window.global === 'undefined') window.global = window.globalThis;
 if (typeof global.queueMicrotask !== 'function') {
     if (typeof global.setImmediate === 'function') {
@@ -10,6 +12,10 @@ if (typeof global.queueMicrotask !== 'function') {
         };
     }
 }
+
+// In development, it is often easier to require these ahead of time and declare them globally.
+// This can also be helpful for adding typescript support, but that is outside the scope
+// of this demonstration.
 
 try {
     window.uxp = require('uxp');

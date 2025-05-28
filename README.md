@@ -1,6 +1,17 @@
 # Angular In UXP
 
 This repo contains a working example of running Angular in UXP.
+
+## Important Information
+
+This branch contains everything needed to run a bare bones Angular application.
+
+The most important files to take a look at are 
+- [manifest.json](public/manifest.json)
+- [angular.json](angular.json)
+- [index-html-transformer.cjs](index-html-transformer.cjs)
+- [load.js](load.js)
+
 ## Getting started
 
 ### Pre-requisites
