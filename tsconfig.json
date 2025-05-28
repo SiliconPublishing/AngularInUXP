@@ -21,10 +21,10 @@
         "lib": ["ES2022", "DOM"],
         "baseUrl": "./",
         "paths": {
-            "@environment": ["projects/example-application/environments/environment.ts"],
-            "@library": ["projects/example-library/src/public_api.ts"]
+            "@environment": ["environments/environment.ts"],
         }
     },
+    "include": ["src/**/*.ts", "./environments/environment.ts"],
     "angularCompilerOptions": {
         "enableI18nLegacyMessageIdFormat": false,
         "strictInjectionParameters": true,

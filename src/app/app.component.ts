@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { environment } from '@environment';
-import { ExampleListService } from '@library';
+import { environment } from 'environments/environment';
+import { ExampleListService } from './services';
 
 declare var host: any;
 declare var indesign: any;
