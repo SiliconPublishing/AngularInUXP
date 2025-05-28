@@ -1,0 +1,64 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+        "app": {
+            "projectType": "application",
+            "schematics": {
+                "@schematics/angular:component": {
+                    "style": "scss"
+                }
+            },
+            "root": "projects/example-application",
+            "sourceRoot": "projects/example-application/src",
+            "prefix": "example-application",
+            "architect": {
+                "build": {
+                    "builder": "@angular-builders/custom-webpack:browser",
+                    "options": {
+                        "indexTransform": "projects/example-library/shared/index-html-transformer.cjs",
+                        "outputPath": "dist/",
+                        "index": "projects/example-application/src/index.html",
+                        "main": "projects/example-application/src/main.ts",
+                        "polyfills": [
+                            "projects/example-library/shared/polyfill.js",
+                            "zone.js"
+                        ],
+                        "tsConfig": "projects/example-application/tsconfig.json",
+                        "inlineStyleLanguage": "scss",
+                        "assets": [
+
+                            {
+                                "glob": "**/*",
+                                "input": "projects/example-application/public"
+                            }
+                        ],
+                        "styles": [
+                            "projects/example-library/shared/global.css",
+                            "projects/example-application/styles.scss"
+                        ],
+                        "scripts": ["projects/example-library/shared/load.js"]
+                    },
+                    "configurations": {
+                        "production": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/example-application/environments/environment.ts",
+                                    "with": "projects/example-application/environments/environment.prod.ts"
+                                }
+                            ],
+                            "outputHashing": "all"
+                        },
+                        "development": {
+                            "optimization": false,
+                            "extractLicenses": false,
+                            "sourceMap": false
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                }
+            }
+        }
+    }
+}
