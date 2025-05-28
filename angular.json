@@ -22,7 +22,6 @@
                         "index": "projects/example-application/src/index.html",
                         "main": "projects/example-application/src/main.ts",
                         "polyfills": [
-                            "projects/example-library/shared/polyfill.js",
                             "zone.js"
                         ],
                         "tsConfig": "projects/example-application/tsconfig.json",
