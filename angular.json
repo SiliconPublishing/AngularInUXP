@@ -22,13 +22,11 @@
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": [
-                            "polyfill.js",
                             "zone.js"
                         ],
                         "tsConfig": "tsconfig.json",
                         "inlineStyleLanguage": "scss",
                         "assets": [
-
                             {
                                 "glob": "**/*",
                                 "input": "public"
@@ -37,7 +35,9 @@
                         "styles": [
                             "styles.scss"
                         ],
-                        "scripts": ["load.js"]
+                        "scripts": [
+                            "load.js"
+                        ]
                     },
                     "configurations": {
                         "production": {
@@ -61,3 +61,4 @@
         }
     }
 }
+

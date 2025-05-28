@@ -15,6 +15,7 @@ declare var photoshop: any;
 export class AppComponent {
     constructor(public list: ExampleListService) { }
 
+    // Brightness controls are show or hidden based on the environment being run.
     public showBrightnessControls = environment.showBrightnessControls;
 
     public inputValue = '';

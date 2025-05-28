@@ -1,6 +1,16 @@
 # Angular In UXP
 
 This repo contains a working example of running Angular in UXP.
+
+## Important Information
+
+This branch contains everything needed to demonstrate different environments, and added support for the VSCode debugger
+
+The most important files to take a look at are 
+- [environments](environments/) to see possible environments
+- [app.component.ts](src/app/app.component.ts) to see usage of environments
+- [angular.json](angular.json) see `projects.app.architect.build.configurations.production.fileReplacements`
+
 ## Getting started
 
 ### Pre-requisites
