@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { environment } from 'environments/environment';
 import { ExampleListService } from './services';
 
 declare var host: any;
@@ -15,7 +14,7 @@ declare var photoshop: any;
 export class AppComponent {
     constructor(public list: ExampleListService) { }
 
-    public showBrightnessControls = environment.showBrightnessControls;
+    public showBrightnessControls = true;
 
     public inputValue = '';
 
