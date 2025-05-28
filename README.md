@@ -1,6 +1,19 @@
 # Angular In UXP
 
 This repo contains a working example of running Angular in UXP.
+
+## Important Information
+
+This branch contains everything needed to demonstrate components, directives, services, and theme awareness.
+
+The most important files to take a look at are 
+- [components](src/app/components/) to see an example component
+- [directives](src/app/directives/) to see an example directive
+- [services](src/app/services/) to see an example service
+- [app.component.html](src/app/app.component.html) to see how components/directives are used.
+- [app.module.ts](src/app/app.module.ts) to see how components/directives need to be registered.
+- [styles.scss](styles.scss) to see how to set theme aware CSS variables
+
 ## Getting started
 
 ### Pre-requisites

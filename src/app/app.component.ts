@@ -28,6 +28,8 @@ export class AppComponent {
         this.filterValue = event.target.value
     }
 
+    // Here we have logic that is specific to the host application, so we need to check which is running.
+    // host is a global variable, see `load.js` for the declaration.
     public setInterface(brightness: UIBrightness) {
         switch (host) {
             case 'InDesign':
